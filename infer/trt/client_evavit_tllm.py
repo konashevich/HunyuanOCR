@@ -19,20 +19,52 @@ from .modality_utils import get_vit_infos, grpc_infer_vit
 
 # NOTE: special token map
 special_token_map = {
+    "<grounding>": "<|extra_59|>",
+    "<ocr>": "<|extra_60|>",
     "<p>": "<|extra_61|>",
     "</p>": "<|extra_62|>",
     "<box>": "<|extra_63|>",
     "</box>": "<|extra_64|>",
+    "<delim>": "<|extra_65|>",
     "<quad>": "<|extra_66|>",
     "</quad>": "<|extra_67|>",
     "<ref>": "<|extra_68|>",
     "</ref>": "<|extra_69|>",
+    "<detail>": "<|extra_70|>",
+    "<patch_image>": "<|extra_71|>",
+    "</patch_image>": "<|extra_72|>",
+    "<patch_split>": "<|extra_73|>",
+    "</ocr>": "<|extra_74|>",
+    "<face>": "<|extra_75|>",
+    "</face>": "<|extra_76|>",
+    "<video>": "<|extra_77|>",
+    "</video>": "<|extra_78|>",
+    "<table>": "<|extra_79|>",
+    "</table>": "<|extra_80|>",
+    "<tr>": "<|extra_81|>",
+    "</tr>": "<|extra_82|>",
+    "<th>": "<|extra_83|>",
+    "</th>": "<|extra_84|>",
+    "<td>": "<|extra_85|>",
+    "</td>": "<|extra_86|>",
+    "colspan": "<|extra_87|>",
+    "rowspan": "<|extra_88|>",
+    "<thead>": "<|extra_89|>",
+    "</thead>": "<|extra_90|>",
+    "<tbody>": "<|extra_91|>",
+    "</tbody>": "<|extra_92|>",
+    "<br>": "<|extra_93|>",
     "<pFig>": "<|extra_94|>",
     "</pFig>": "<|extra_95|>",
+    "<think>": "<|extra_96|>",
+    "</think>": "<|extra_97|>",
+    "<answer>": "<|extra_98|>",
+    "</answer>": "<|extra_99|>",
+    "<system_prompt_sep>": "<|extra_100|>",
     "<det>": "<|extra_101|>",
     "</det>": "<|extra_102|>",
     "<point>": "<|extra_103|>",
-    "</point>": "<|extra_104|>"
+    "</point>": "<|extra_104|>",
 }
 
 new_special_token_map = {
@@ -49,7 +81,32 @@ new_special_token_map = {
     "<det>": "<｜hy_place▁holder▁no▁116｜>",
     "</det>": "<｜hy_place▁holder▁no▁117｜>",
     "<point>": "<｜hy_place▁holder▁no▁118｜>",
-    "</point>": "<｜hy_place▁holder▁no▁119｜>"
+    "</point>": "<｜hy_place▁holder▁no▁119｜>",
+    "<ocr>": "<｜hy_place▁holder▁no▁130｜>",
+    "</ocr>": "<｜hy_place▁holder▁no▁131｜>",
+    "<face>": "<｜hy_place▁holder▁no▁132｜>",
+    "</face>": "<｜hy_place▁holder▁no▁133｜>",
+    "<table>": "<｜hy_place▁holder▁no▁134｜>",
+    "</table>": "<｜hy_place▁holder▁no▁135｜>",
+    "<tr>": "<｜hy_place▁holder▁no▁136｜>",
+    "</tr>": "<｜hy_place▁holder▁no▁137｜>",
+    "<th>": "<｜hy_place▁holder▁no▁138｜>",
+    "</th>": "<｜hy_place▁holder▁no▁139｜>",
+    "<td>": "<｜hy_place▁holder▁no▁140｜>",
+    "</td>": "<｜hy_place▁holder▁no▁141｜>",
+    "colspan": "<｜hy_place▁holder▁no▁142｜>",
+    "rowspan": "<｜hy_place▁holder▁no▁143｜>",
+    "<thead>": "<｜hy_place▁holder▁no▁144｜>",
+    "</thead>": "<｜hy_place▁holder▁no▁145｜>",
+    "<tbody>": "<｜hy_place▁holder▁no▁146｜>",
+    "</tbody>": "<｜hy_place▁holder▁no▁147｜>",
+    "<br>": "<｜hy_place▁holder▁no▁148｜>",
+    "<think>": "<｜hy_place▁holder▁no▁149｜>",
+    "</think>": "<｜hy_place▁holder▁no▁150｜>",
+    "<answer>": "<｜hy_place▁holder▁no▁151｜>",
+    "</answer>": "<｜hy_place▁holder▁no▁152｜>",
+    "/think": "<｜hy_place▁holder▁no▁153｜>",
+    "/no_think": "<｜hy_place▁holder▁no▁154｜>",
 }
 
 special_token_map_inv = {v: k for k, v in special_token_map.items()}
@@ -465,7 +522,7 @@ if __name__ == "__main__":
     parser.add_argument("--ip", type=str, default="localhost", help="gpt server ip")
     parser.add_argument("--port", type=int, default=8021, help="gRPC server port")
     parser.add_argument("--vit_ip", type=str, default="localhost", help="vit server ip")
-    parser.add_argument("--vit_port", type=int, default=9021, help="VIT server port")
+    parser.add_argument("--vit_port", type=int, default=7021, help="VIT server port")
     parser.add_argument("--model_name", type=str, default="gpt", help="gpt model name")
     parser.add_argument("--tokenizer_type", type=str, default="hy_ptm_for_business_gqa", help="tokenizer type")
     parser.add_argument("--exact_tokenizer", action="store_true", default=False, help="use exact tokenizer in text handler")
