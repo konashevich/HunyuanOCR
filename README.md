@@ -6,6 +6,12 @@
 
 # HunyuanOCR: An Advanced multilingual VLM with 1B parameter for end-to-end OCR tasks
 
+<div align="center">
+
+[中文](./README_zh.md) | [English](./README.md)
+
+</div>
+
 📑 Paper & Model Weights are coming soon!
 
 [Demo](#demo) | [Install](#installation) | [Quick Start](#quick-start) | [Documentation](#documentation)
