@@ -30,6 +30,15 @@ HunyuanOCR is an open-source, commercial-grade, and highly efficient multilingua
 - 🚀 **Easy Deployment**: Simple integration with existing systems
 
 
+## 📋 Model Card
+
+| Component | Architecture | Parameters | Function |
+|-----------|-------------|------------|-----------|
+| Vision Encoder | SigVLIP-v2 (ViT-based) | 400M | Image processing and feature extraction |
+| Language Model | Hunyuan-LLM | 500M | Text understanding and generation |
+| Vision-Language Bridge | MLP Adapter | 90M | Multimodal feature fusion |
+| **Total** | - | **~1B** | End-to-end OCR and document understanding |
+
 ## 🛠️ Dependencies and Installation
 
 ### System Requirements
@@ -48,14 +57,7 @@ pip install opencv-python-headless
 pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu128
 ```
 
-## 📋 Model Card
 
-| Component | Architecture | Parameters | Function |
-|-----------|-------------|------------|-----------|
-| Vision Encoder | SigVLIP-v2 (ViT-based) | 400M | Image processing and feature extraction |
-| Language Model | Hunyuan-LLM | 500M | Text understanding and generation |
-| Vision-Language Bridge | MLP Adapter | 90M | Multimodal feature fusion |
-| **Total** | - | **~1B** | End-to-end OCR and document understanding |
 
 ## 🚀 Quick Start with Transformers
 
@@ -182,7 +184,7 @@ with open("input.jsonl", "r") as fin, open("output.jsonl", "w") as fout:
 
 ## 📊 Evaluation
 
-### Text Spotting Performance
+### Text Spotting Performance on In-house Benchmark
 
 | Model Type | Methods | Overall | Art | Doc | Game | Hand | Ads | Receipt | Screen | Scene | Video |
 |------------|---------|---------|-----|-----|------|------|-----|----------|---------|--------|--------|
@@ -195,7 +197,7 @@ with open("input.jsonl", "r") as fin, open("output.jsonl", "w") as fout:
 
 > **Summary**: HunyuanOCR achieves the best overall performance (70.92%) across different scenarios, significantly outperforming both traditional OCR methods and general VLMs.
 
-### Document Parsing Performance (Edit Distance)
+### Document Parsing Performance on OmniDocBench (Edit Distance)
 
 | Model | English |  |  |  | Chinese |  |  |  |
 |-------|---------|---------|----------|--------|----------|---------|----------|---------|
@@ -207,7 +209,7 @@ with open("input.jsonl", "r") as fin, open("output.jsonl", "w") as fout:
 
 > **Summary**: DeepseekOCR demonstrates superior performance in both English and Chinese document parsing, achieving the lowest edit distances across most categories.
 
-### Information Extraction and VQA Performance
+### Information Extraction (in-house Benchmark) and VQA Performance (OCRBench)
 
 | Model | Cards & Receipts | Video Subtitles | OCRBench |
 |-------|------------------|-----------------|-----------|
@@ -219,12 +221,10 @@ with open("input.jsonl", "r") as fin, open("output.jsonl", "w") as fout:
 | Gemini-2.5-Pro | 80.63 | 53.65 | 872 |
 | **HunyuanOCR (∼1B)** | **92.41** | **92.87** | 858 |
 
-> **Summary**: Despite its compact size, HunyuanOCR significantly outperforms larger models in cards/receipts processing and video subtitle extraction, while maintaining competitive performance on OCRBench.
+> **Summary**: HunyuanOCR significantly outperforms larger models in cards/receipts processing and video subtitle extraction, while maintaining competitive performance on OCRBench.
 
 ## 💡 Case Studies
 <details>
-
-<summary>Click to view example results</summary>
 
 Document Processing
 
