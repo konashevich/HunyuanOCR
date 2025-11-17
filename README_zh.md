@@ -1,19 +1,24 @@
+<div align="center">
+
+[中文](./README_zh.md) | [English](./README.md)
+
+</div>
+
+# HunyuanOCR
+
+混元原生多模态端到端 OCR 专家，1B 轻量化参数却斩获多项业界 SOTA！
+精通复杂文档解析，兼具多语种文字识别、票据字段抽取、字幕提取、拍照翻译等全场景实用技能！
+
 <p align="center">
  <img src="./assets/hunyuan_logo.png" width="400"/> <br>
 </p>
 
 <div align="center">
 
-[中文](./README_zh.md) | [English](./README.md)
-
-# HunyuanOCR: 基于混元架构的1B参数端到端多语言OCR模型
-
-混元原生多模态端到端 OCR 专家，1B 轻量化参数却斩获多项业界 SOTA！
-精通复杂文档解析，兼具多语种文字识别、票据字段抽取、字幕提取、拍照翻译等全场景实用技能！
 
 📑 论文与模型权重即将发布！
 
-[演示](#演示) | [安装](#安装) | [快速开始](#快速开始) | [文档](#文档)
+[演示](#演示) | [安装](#-环境依赖与安装) | [快速开始](#-基于Transformers快速使用) | [文档](#-引用)
 
 </div>
 
@@ -25,10 +30,6 @@ HunyuanOCR是一款基于混元原生多模态架构的端到端OCR专家模型�
 
 基于腾讯混元技术打造，该模型通过端到端架构设计和单次推理，提供卓越性能的同时大幅简化部署流程，在与传统级联系统和商用API的对比中保持竞争优势。
 
-<div align="center">
-  <img src="./assets/hyocr-pipeline.png" alt="HunyuanOCR框架" width="80%">
-</div>
-
 ## ✨ 核心特点
 
 - 💪 **轻量化架构**：基于混元原生多模态架构与训练策略，打造仅1B参数的OCR专项模型，大幅降低部署成本。
@@ -39,14 +40,9 @@ HunyuanOCR是一款基于混元原生多模态架构的端到端OCR专家模型�
 
 - 🌏 **多语种支持**：支持超过100种语言，在单语种和混合语言场景下均表现出色。
 
-## 📋 模型卡片
-
-| 组件 | 架构 | 参数量 | 功能 |
-|-----------|-------------|------------|-----------|
-| 视觉编码器 | SigVLIP-v2 (ViT-based) | 400M | 图像处理与特征提取 |
-| 语言模型 | Hunyuan-LLM | 500M | 文本理解与生成 |
-| 视觉语言桥接 | MLP Adapter | 90M | 多模态特征融合 |
-| **总计** | - | **~1B** | 端到端OCR与文档理解 |
+<div align="center">
+  <img src="./assets/hyocr-pipeline.png" alt="HunyuanOCR框架" width="50%">
+</div>
 
 ## 🛠️ 环境依赖与安装
 
@@ -72,107 +68,47 @@ pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https
 
 HunyuanOCR 提供直观的模型推理接口。以下是使用指引：
 
-#### 1. 导入依赖库
 ```python
-import os
+from transformers import AutoModel, AutoProcessor
 import torch
-import numpy as np
-from PIL import Image
-from transformers import AutoProcessor, HunYuanVLV1ForConditionalGeneration
-from qwen_vl_utils import process_vision_info
-```
+import os
 
-#### 2. 加载模型
-```python
-def load_model():
-    # Set GPU device
-    os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-    
-    # Load processor and model
-    processor = AutoProcessor.from_pretrained(
-        "PATH_TO_MODEL",
-        use_fast=False,
-        trust_remote_code=True
-    )
-    
-    model = HunYuanVLV1ForConditionalGeneration.from_pretrained(
-        "PATH_TO_MODEL",
-        attn_implementation="eager",
-        torch_dtype=torch.bfloat16,
-        device_map="auto"
-    )
-    
-    return model, processor
-```
+# Set GPU device
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-#### 3. 推理代码
-```python
-def inference(text: str, img_path: str, model, processor) -> list:
-    # Construct input format
-    messages = [{
-        "role": "user",
-        "content": [
-            {"type": "image", "image": img_path},
-            {"type": "text", "text": text},
-        ],
-    }]
-    
-    # Process inputs
-    texts = [processor.apply_chat_template(msg, tokenize=False, add_generation_prompt=True)
-             for msg in messages]
-    image_inputs, video_inputs = process_vision_info(messages)
-    
-    # Model inference
-    inputs = processor(
-        text=texts,
-        images=image_inputs,
-        videos=video_inputs,
-        padding=True,
-        return_tensors="pt"
-    ).to("cuda")
-    
-    # Generate results
-    with torch.no_grad():
-        output = model.generate(
-            **inputs,
-            max_new_tokens=1024*8,
-            repetition_penalty=1.03,
-            do_sample=False
-        )
-    
-    return processor.batch_decode(
-        output[:, inputs.input_ids.shape[1]:],
-        skip_special_tokens=True,
-        clean_up_tokenization_spaces=False
-    )
-```
-
-#### 4. 使用示例
-```python
-# Load model
-model, processor = load_model()
+# Load model and processor
+model_name = "Tencent/HunyuanOCR"
+processor = AutoProcessor.from_pretrained(model_name, trust_remote_code=True)
+model = AutoModel.from_pretrained(
+    model_name,
+    attn_implementation="flash_attention_2",
+    torch_dtype=torch.bfloat16,
+    trust_remote_code=True,
+    use_safetensors=True
+)
+model = model.eval().cuda()
 
 # Single image inference
-img_path = "path/to/your/image.jpg"
-query = "Please extract the text content from this image"
-result = inference(text=query, img_path=img_path, model=model, processor=processor)
+image_path = "path/to/your/image.jpg" 
+prompt = "<image>\nExtract text from the image."
+output_path = "path/to/output"
+
+result = model.infer(
+    processor,
+    prompt=prompt,
+    image_file=image_path,
+    output_path=output_path,
+    base_size=1024,
+    image_size=640,
+    crop_mode=True,
+    save_results=True
+)
 print("Inference result:", result)
+```
 
-# Batch processing
-import json
-from tqdm import tqdm
-
-with open("input.jsonl", "r") as fin, open("output.jsonl", "w") as fout:
-    for line in tqdm(fin):
-        data = json.loads(line)
-        result = inference(
-            text=data["question"],
-            img_path=data["img_path"],
-            model=model,
-            processor=processor
-        )
-        data["response"] = result
-        fout.write(json.dumps(data, ensure_ascii=False) + "\n")
+#### 或者，也可以直接使用提供的推理脚本：
+```shell
+cd Hunyuan-OCR-master/Hunyuan-OCR-hf && python run_hy_ocr.py
 ```
 
 ## 💬 推荐的OCR任务提示词

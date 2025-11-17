@@ -1,20 +1,23 @@
-<p align="center">
- <img src="./assets/hunyuan_logo.png" width="400"/> <br>
-</p>
-
-<div align="center">
-
-# HunyuanOCR: An Advanced multilingual VLM with 1B parameter for end-to-end OCR tasks
-
 <div align="center">
 
 [中文](./README_zh.md) | [English](./README.md)
 
 </div>
 
+# HunyuanOCR
+
+<p align="center">
+ <img src="./assets/hunyuan_logo.png" width="400"/> <br>
+</p>
+
+<div align="center">
+
+
+
+
 📑 Paper & Model Weights are coming soon!
 
-[Demo](#demo) | [Install](#installation) | [Quick Start](#quick-start) | [Documentation](#documentation)
+[Demo](#demo) | [Install](#-dependencies-and-installation) | [Quick Start](#-quick-start-with-transformers) | [Documentation](#-citation)
 
 </div>
 
@@ -26,10 +29,6 @@ HunyuanOCR stands as a leading end-to-end OCR expert powered by Hunyuan's native
 
 Built on Tencent's Hunyuan technology, this versatile model delivers exceptional performance through end-to-end architecture design and single-pass inference. It significantly simplifies deployment while maintaining competitive performance against both established cascade systems and commercial APIs.
 
-<div align="center">
-  <img src="./assets/hyocr-pipeline.png" alt="HunyuanOCR framework" width="60%">
-</div>
-
 ## ✨ Key Features
 
 - 💪 **Efficient Lightweight Architecture**: Built on Hunyuan's native multimodal architecture and training strategy, achieving SOTA performance with only 1B parameters, significantly reducing deployment costs.
@@ -39,6 +38,12 @@ Built on Tencent's Hunyuan technology, this versatile model delivers exceptional
 - 🚀 **Ultimate Usability**: Deeply embraces the "end-to-end" philosophy of large models - achieving SOTA results with single instruction and single inference, offering greater efficiency and convenience compared to industry cascade solutions.
 
 - 🌏 **Extensive Language Support**: Robust support for over 100 languages, excelling in both single-language and mixed-language scenarios across various document types.
+
+<div align="center">
+  <img src="./assets/hyocr-pipeline.png" alt="HunyuanOCR framework" width="50%">
+</div>
+
+
 
 
 ## 🛠️ Dependencies and Installation
