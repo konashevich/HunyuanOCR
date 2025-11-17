@@ -17,7 +17,7 @@
 
 📑 Paper & Model Weights are coming soon!
 
-[Demo](#demo) | [Install](#-dependencies-and-installation) | [Quick Start](#-quick-start-with-transformers) | [Documentation](#-citation)
+[Demo](#demo) | [Install](##-dependencies-and-installation) | [Quick Start](##-quick-start-with-transformers) | [Prompt Templates](##-application-oriented-prompts) | [Documentation](##-citation)
 
 </div>
 
