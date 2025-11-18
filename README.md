@@ -80,8 +80,18 @@ from PIL import Image
 import numpy as np
 import requests
 import torch
-from qwen_vl_utils import process_vision_info
 
+import base64
+import requests
+from io import BytesIO
+
+def get_image(input_source):
+    if input_source.startswith(('http://', 'https://')):
+        response = requests.get(input_source)
+        response.raise_for_status()
+        return Image.open(BytesIO(response.content))
+    else:
+        return Image.open(input_source)
 
 def main():
     model_name_or_path = "tencent/HunyuanOCR"
@@ -107,11 +117,10 @@ def main():
         processor.apply_chat_template(msg, tokenize=False, add_generation_prompt=True)
         for msg in messages
     ]
-    image_inputs, video_inputs = process_vision_info(messages)
+    image_inputs = get_image(img_path)
     inputs = processor(
         text=texts,
         images=image_inputs,
-        videos=video_inputs,
         padding=True,
         return_tensors="pt",
     )
@@ -137,7 +146,6 @@ def main():
         generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
     )
     print(output_texts)
-
 
 if __name__ == '__main__':
     main()
