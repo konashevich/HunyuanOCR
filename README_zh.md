@@ -1,4 +1,4 @@
-<div align="left">
+<div align="center">
 
 [中文](./README_zh.md) | [English](./README.md)
 
@@ -6,8 +6,8 @@
 
 # 混元OCR：原生多模态端到端 OCR 专家，1B 轻量化参数却斩获多项业界 SOTA！
 
-<p align="left">
- <img src="./assets/hyocr-head-img.png" width="800"/> <br>
+<p align="center">
+ <img src="./assets/hyocr-head-img.png" width="70%"/> <br>
 </p>
 
 <div align="center">

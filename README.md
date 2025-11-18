@@ -1,4 +1,4 @@
-<div align="left">
+<div align="center">
 
 [中文](./README_zh.md) | [English](./README.md)
 
@@ -6,9 +6,10 @@
 
 # HunyuanOCR
 
-<p align="left">
- <img src="./assets/hyocr-head-img.png" width="800"/> <br>
+<p align="center">
+ <img src="./assets/hyocr-head-img.png" width="70%"/> <br>
 </p>
+
 
 <div align="center">
 
