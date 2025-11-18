@@ -7,7 +7,7 @@
 # HunyuanOCR
 
 <p align="center">
- <img src="./assets/hunyuan_logo.png" width="400"/> <br>
+ <img src="./assets/hyocr-head-img.png" width="500"/> <br>
 </p>
 
 <div align="center">
@@ -187,13 +187,16 @@ cd Hunyuan-OCR-master/Hunyuan-OCR-hf && python run_hy_ocr.py
 
 
 ### Document Processing
+<p align="left">
+ <img src="./assets/vis-parsing.png" width="20%"/> <br>
+</p>
 
 
 ### Information Extraction
 
 
 <p align="left">
- <img src="./assets/ie_parallel.jpg" width="5%"/> <br>
+ <img src="./assets/ie_parallel.jpg" width="8%"/> <br>
 </p>
 
 **Prompt:**
