@@ -4,8 +4,11 @@
 
 </div>
 
+<div align="center">
+
 # 混元OCR：原生多模态端到端 OCR 专家，1B 轻量化参数却斩获多项业界 SOTA！
 
+</div>
 <p align="center">
  <img src="./assets/hyocr-head-img.png" width="70%"/> <br>
 </p>
