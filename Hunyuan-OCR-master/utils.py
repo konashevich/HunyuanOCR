@@ -6,6 +6,25 @@ from typing import Tuple, List, Dict
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
+def clean_repeated_substrings(text):
+    """Clean repeated substrings in text"""
+    n = len(text)
+    if n<8000:
+        return text
+    for length in range(2, n // 10 + 1):
+        candidate = text[-length:] 
+        count = 0
+        i = n - length
+        
+        while i >= 0 and text[i:i + length] == candidate:
+            count += 1
+            i -= length
+
+        if count >= 10:
+            return text[:n - length * (count - 1)]  
+
+    return text
+
 def parse_coords(coord_str: str) -> Tuple[float, float]:
     """Parse coordinate string and return (x,y) tuple"""
     try:
@@ -140,7 +159,7 @@ def main():
     
     # Get image path and response
     image_path = os.path.join(image_root, item["image_name"])
-    response = item["vllm-infer-1117"]
+    response = clean_repeated_substrings(item["vllm-infer-1117"])
     
     print(f"Processing image: {item['image_name']}")
     
