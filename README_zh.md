@@ -158,6 +158,8 @@ cd Hunyuan-OCR-master/Hunyuan-OCR-hf && python run_hy_ocr.py
 
 ## 📊 评测指标
 
+> **Note**: 竞品评测指标是由官方提供接口以及推荐的标准指令复现得出
+
 ### 自建评测集上的文字检测识别指标
 
 | Model Type | Methods | Overall | Art | Doc | Game | Hand | Ads | Receipt | Screen | Scene | Video |
