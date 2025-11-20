@@ -17,10 +17,9 @@
 
 <div align="center">
 
-📑 Paper & Model Weights are coming soon!
 
 
-[Demo](http://29.210.129.176:8080/) | [Install](#dependencies-and-installation) | [Quick Start](#quick-start-with-transformers) | [Prompt Templates](#application-oriented-prompts) | [Documentation](#citation)
+[Demo](http://29.210.129.176:8080/) | [Install](#dependencies-and-installation) | [Quick Start](#quick-start-with-transformers) | [Prompt Templates](#application-oriented-prompts) | [Technical Report](#citation)
 
 </div>
 
@@ -28,7 +27,7 @@
 - **[2025/11/20]** 📝 Inference code and model weights publicly available.
 
 ## 📖 Introduction
-**HunyuanOCR** stands as a leading end-to-end OCR expert VLM powered by Hunyuan's native multimodal architecture. With a remarkably lightweight 1B parameter design, it has achieved multiple state-of-the-art benchmarks across the industry. The model demonstrates mastery in **complex document parsing** while excelling in practical applications including **multilingual text recognition, open-field information extraction, video subtitle extraction, and photo translation**.
+**HunyuanOCR** stands as a leading end-to-end OCR expert VLM powered by Hunyuan's native multimodal architecture. With a remarkably lightweight 1B parameter design, it has achieved multiple state-of-the-art benchmarks across the industry. The model demonstrates mastery in **complex multilingual document parsing** while excelling in practical applications including **text spotting, open-field information extraction, video subtitle extraction, and photo translation**.
 
 Built on Tencent's Hunyuan technology, this versatile model delivers exceptional performance through end-to-end architecture design and single-pass inference. It significantly simplifies deployment while maintaining competitive performance against both established cascade systems and commercial APIs.
 
@@ -165,6 +164,7 @@ cd Hunyuan-OCR-master/Hunyuan-OCR-hf && python run_hy_ocr.py
 | **Information Extraction** | • Output the value of Key.<br><br>• Extract the content of the fields: ['key1','key2', ...] from the image and return it in JSON format.<br><br>• Extract the subtitles from the image. | • 输出 Key 的值。<br><br>• 提取图片中的: ['key1','key2', ...] 的字段内容，并按照 JSON 格式返回。<br><br>• 提取图片中的字幕。 |
 | **Translation** | First extract the text, then translate the text content into English. If it is a document, ignore the header and footer. Formulas should be represented in LaTeX format, and tables should be represented in HTML format. | 先提取文字，再将文字内容翻译为英文。若是文档，则其中页眉、页脚忽略。公式用latex格式表示，表格用html格式表示。 |
 
+
 ## 📊 Evaluation
 
 ### Text Spotting Performance on In-house Benchmark
@@ -224,7 +224,7 @@ cd Hunyuan-OCR-master/Hunyuan-OCR-hf && python run_hy_ocr.py
 | Qwen3-VL-2B-Instruct | 2B | 66.30 | 66.77 | 73.49 |
 | **HunyuanOCR** | **1B** | 73.38 | 73.62 | 83.48 |
 
-> **总结**: HunyuanOCR using only 1B of parameters, achieved comparable results to Gemini-2.5-Flash and Qwen3-VL-235B in photo translation tasks.
+> **Summary**: HunyuanOCR using only 1B of parameters, achieved comparable results to Gemini-2.5-Flash and Qwen3-VL-235B in photo translation tasks.
 
 ## 💡 Visualizations
 <details>
