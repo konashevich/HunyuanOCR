@@ -158,7 +158,7 @@ cd Hunyuan-OCR-master/Hunyuan-OCR-hf && python run_hy_ocr.py
 
 ## 📊 评测指标
 
-> **Note**: 竞品评测指标是由官方提供接口以及推荐的标准指令复现得出
+> **Note**: 竞品评测指标来源：官方report指标(如有)，或竞品模型/接口以及推荐的标准指令复现所得(如无)。
 
 ### 自建评测集上的文字检测识别指标
 
