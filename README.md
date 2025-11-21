@@ -234,7 +234,8 @@ cd Hunyuan-OCR-master/Hunyuan-OCR-hf && python run_hy_ocr.py
 
 
 ### Text Spotting
-#### Our model aims to output the text content and corresponding coordinate information of all text appearing in a text image at the line level. It performs exceptionally well in scenarios such as documents, artistic fonts, street views, handwriting, advertisements, invoices, screenshots, games, and videos.
+
+Our model aims to output the text content and corresponding coordinate information of all text appearing in a text image at the line level. It performs exceptionally well in scenarios such as documents, artistic fonts, street views, handwriting, advertisements, invoices, screenshots, games, and videos.
 
 <p align="left">
  <img src="./assets/spotting1_cropped.png" width="20%"/> <br>
@@ -243,18 +244,21 @@ cd Hunyuan-OCR-master/Hunyuan-OCR-hf && python run_hy_ocr.py
 
 
 ### Complex Document Processing
-#### Digitizing scanned or photographed images of multilingual documents involves, specifically, organizing the text content within the images according to reading order, using LaTeX format for formulas, and expressing complex tables in HTML format.
+
+Digitizing scanned or photographed images of multilingual documents involves, specifically, organizing the text content within the images according to reading order, using LaTeX format for formulas, and expressing complex tables in HTML format.
 
 <p align="left">
  <img src="./assets/vis_parsing_fig.png" width="30%"/> <br>
  <img src="./assets/show_res_parsing_fig.png" width="30%"/> <br>
  <img src="./assets/vis_parsing_table.png" width="30%"/> <br>
+ <img src="./assets/vis_parsing_table_2.png" width="30%"/> <br>
 </p>
 
 
 
 ### Open-field Information Extraction
-#### For common cards and tickets, fields of interest (such as name/address/company) are parsed using standard JSON format.
+
+For common cards and tickets, fields of interest (such as name/address/company) are parsed using standard JSON format.
 
 
 <p align="left">
@@ -279,7 +283,8 @@ Extract the content of the fields: ['单价', '上车时间', '发票号码', '�
 ```
 
 ### Video Subtitle Extraction
-#### Our model is capable of automatically extracting subtitles from videos, including bilingual ones.
+
+Our model is capable of automatically extracting subtitles from videos, including bilingual ones.
 
 <p align="left">
  <img src="./assets/zimu2.jpg" width="30%"/> <br>
@@ -294,7 +299,8 @@ Extract the subtitles from the image.
 
 
 ### Photo Translation
-#### Our model is able to translate images of minor languages ​​taken into Chinese or English text format end-to-end. Currently, it mainly supports 14 frequently used minor languages ​​(specifically including: German, Spanish, Turkish, Italian, Russian, French, Portuguese, Arabic, Thai, Vietnamese, Indonesian, Malay, Japanese, and Korean) into Chinese/English, as well as Chinese-English translation function (it won the small model track championship in the ICDAR2025 document end-to-end translation competition).
+
+Our model is able to translate images of minor languages ​​taken into Chinese or English text format end-to-end. Currently, it mainly supports 14 frequently used minor languages ​​(specifically including: German, Spanish, Turkish, Italian, Russian, French, Portuguese, Arabic, Thai, Vietnamese, Indonesian, Malay, Japanese, and Korean) into Chinese/English, as well as Chinese-English translation function (it won the small model track championship in the ICDAR2025 document end-to-end translation competition).
 
 <p align="left">
  <img src="./assets/vis-translation.png" width="30%"/> <br>
