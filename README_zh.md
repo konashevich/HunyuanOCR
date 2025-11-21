@@ -227,8 +227,8 @@ cd Hunyuan-OCR-master/Hunyuan-OCR-hf && python run_hy_ocr.py
 
 
 <p align="left">
- <img src="./assets/spotting1_cropped.png" width="20%"/> <br>
- <img src="./assets/vis_document_23.jpg" width="20%"/> <br>
+ <img src="./assets/spotting1_cropped.png" width="30%"/> <br>
+ <img src="./assets/vis_document_23.jpg" width="30%"/> <br>
 </p>
 
 
@@ -258,7 +258,7 @@ cd Hunyuan-OCR-master/Hunyuan-OCR-hf && python run_hy_ocr.py
 对常见卡证和票据的感兴趣字段（如姓名/地址/单位等），采用标准的json格式解析。
 
 <p align="left">
- <img src="./assets/vis_ie_1.png" width="20%"/> <br>
+ <img src="./assets/vis_ie_1.png" width="30%"/> <br>
 </p>
 
 <p align="left">

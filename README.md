@@ -238,8 +238,8 @@ cd Hunyuan-OCR-master/Hunyuan-OCR-hf && python run_hy_ocr.py
 Our model aims to output the text content and corresponding coordinate information of all text appearing in a text image at the line level. It performs exceptionally well in scenarios such as documents, artistic fonts, street views, handwriting, advertisements, invoices, screenshots, games, and videos.
 
 <p align="left">
- <img src="./assets/spotting1_cropped.png" width="20%"/> <br>
- <img src="./assets/vis_document_23.jpg" width="20%"/> <br>
+ <img src="./assets/spotting1_cropped.png" width="30%"/> <br>
+ <img src="./assets/vis_document_23.jpg" width="30%"/> <br>
 </p>
 
 
@@ -269,7 +269,7 @@ Digitizing scanned or photographed images of multilingual documents involves, sp
 For common cards and tickets, fields of interest (such as name/address/company) are parsed using standard JSON format.
 
 <p align="left">
- <img src="./assets/vis_ie_1.png" width="20%"/> <br>
+ <img src="./assets/vis_ie_1.png" width="30%"/> <br>
 </p>
 
 <p align="left">
@@ -305,7 +305,7 @@ Our model is capable of automatically extracting subtitles from videos, includin
 
 
 
-### Photo Translation
+### Image Text Translation
 
 Our model is able to translate images of minor languages ​​taken into Chinese or English text format end-to-end. Currently, it mainly supports 14 frequently used minor languages ​​(specifically including: German, Spanish, Turkish, Italian, Russian, French, Portuguese, Arabic, Thai, Vietnamese, Indonesian, Malay, Japanese, and Korean) into Chinese/English, as well as Chinese-English translation function (it won the small model track championship in the ICDAR2025 document end-to-end translation competition).
 
