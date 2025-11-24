@@ -192,7 +192,7 @@ cd Hunyuan-OCR-master/Hunyuan-OCR-hf && python run_hy_ocr.py
 | Seed-1.6-Vision | 70.12 | 67.5 | 60.45 | 881 |
 | Qwen3-VL-235B-A22B-Instruct | 75.59 | 78.4 | 50.74 | **920** |
 | Gemini-2.5-Pro | 80.59 | 80.66 | 53.65 | 872 |
-| **HunyuanOCR (∼1B)** | **92.29** | **92.53** | **92.87** | 860 |
+| **HunyuanOCR** | **92.29** | **92.53** | **92.87** | 860 |
 
 
 > **Summary**: HunyuanOCR significantly outperforms larger models in cards/receipts processing and video subtitle extraction, while maintaining competitive performance on OCRBench.
@@ -300,12 +300,12 @@ Our model is able to translate images of minor languages ​​taken into Chines
 
 ## 📚 Citation
 @misc{hunyuanocr2025,
-    title={HunyuanOCR: Advanced OCR Engine for Document Understanding},
-    author={Tencent Hunyuan Team},
+    title={HunyuanOCR Technical Report},
+    author={Tencent Hunyuan Vision Team},
     year={2025},
     publisher={GitHub},
     journal={GitHub repository},
-    howpublished={\url{https://github.com/Tencent/HunyuanOCR}}
+    howpublished={\url{https://github.com/Tencent-Hunyuan/HunyuanOCR}}
 }
 
 ## 🙏 Acknowledgements
