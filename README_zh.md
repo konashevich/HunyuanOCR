@@ -53,6 +53,40 @@
 - 🧠 GPU显存：80GB 
 - 💾 磁盘空间：6GB
 
+## 🚀 基于vLLM快速使用
+
+### 安装步骤
+```bash
+pip install vllm --extra-index-url https://wheels.vllm.ai/nightly
+```
+
+### 模型推理
+
+```python
+from vllm import LLM, SamplingParams
+from PIL import Image
+from transformers import AutoProcessor
+
+model_path = "tencent/HunyuanOCR"
+llm = LLM(model=model_path, trust_remote_code=True)
+processor = AutoProcessor.from_pretrained(model_path)
+sampling_params = SamplingParams(temperature=0, max_tokens=16384)
+
+img_path = "/path/to/image.jpg"
+img = Image.open(img_path)
+messages = [
+    {"role": "user", "content": [
+        {"type": "image", "image": img_path},
+        {"type": "text", "text": "Detect and recognize text in the image, and output the text coordinates in a formatted manner."}
+    ]}
+]
+prompt = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+inputs = {"prompt": prompt, "multi_modal_data": {"image": [img]}}
+output = llm.generate([inputs], sampling_params)[0]
+print(output.outputs[0].text)
+```
+
+
 ## 🚀 基于Transformers快速使用
 
 ### 安装步骤
