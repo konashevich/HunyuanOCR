@@ -104,8 +104,8 @@ messages = [
 ]
 prompt = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
 inputs = {"prompt": prompt, "multi_modal_data": {"image": [img]}}
-output = clean_repeated_substrings(llm.generate([inputs], sampling_params)[0])
-print(output.outputs[0].text)
+output = llm.generate([inputs], sampling_params)[0]
+print(clean_repeated_substrings(output.outputs[0].text))
 ```
 
 ## 🚀 Quick Start with Transformers
