@@ -57,6 +57,9 @@
 - 💾 Disk Space: 6GB
 
 ## 🚀 Quick Start with vLLM (⭐ Recommended)
+
+- **[HunyuanOCR Usage Guide](https://docs.vllm.ai/projects/recipes/en/latest/Tencent-Hunyuan/HunyuanOCR.html)**
+
 ### Installation
 ```bash
 pip install vllm --extra-index-url https://wheels.vllm.ai/nightly

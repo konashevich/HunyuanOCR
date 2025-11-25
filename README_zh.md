@@ -54,6 +54,8 @@
 
 ## 🚀 基于vLLM快速使用 (⭐ 推荐)
 
+- **[HunyuanOCR vLLM使用指南](https://docs.vllm.ai/projects/recipes/en/latest/Tencent-Hunyuan/HunyuanOCR.html)**
+
 ### 安装步骤
 ```bash
 pip install vllm --extra-index-url https://wheels.vllm.ai/nightly
