@@ -247,6 +247,7 @@ cd Hunyuan-OCR-master/Hunyuan-OCR-hf && python run_hy_ocr.py
 | Qwen3-VL-8B-Instruct | 4B | 75.09 | 75.63 | 79.86 |
 | Qwen3-VL-4B-Instruct | 4B | 70.38 | 70.29 | 78.45 |
 | Qwen3-VL-2B-Instruct | 2B | 66.30 | 66.77 | 73.49 |
+| PP-DocTranslation | - | 52.63 | 52.43 | 82.09 |
 | **HunyuanOCR** | **1B** | 73.38 | 73.62 | 83.48 |
 
 > **总结**: HunyuanOCR仅使用1B参数量，在拍照翻译任务上取得了与Qwen3-VL-235B相当的效果。
