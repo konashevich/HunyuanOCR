@@ -18,7 +18,7 @@
 <p align="center">
 <a href="https://huggingface.co/spaces/tencent/HunyuanOCR"><b>🎯 Demo</b></a> |
 <a href="https://huggingface.co/tencent/HunyuanOCR"><b>📥 Model Download</b></a> |
-<a href="https://github.com/Tencent-Hunyuan/HunyuanOCR/blob/main/HunyuanOCR_Technical_Report.pdf"><b>📄 Technical Report</b></a>
+<a href="https://arxiv.org/abs/2511.19575"><b>📄 Technical Report</b></a>
 </p>
 
 ## 🔥 News
@@ -364,12 +364,12 @@ Our model is able to translate images of minor languages ​​taken into Chines
 
 ## 📚 Citation
 ```
-@software{hunyuanocr2025,
-  author    = {Tencent Hunyuan Vision Team},
-  title     = {HunyuanOCR Technical Report},
-  year      = {2025},
-  url       = {https://github.com/Tencent-Hunyuan/HunyuanOCR},
-  publisher = {GitHub}
+@misc{hunyuanvisionteam2025hunyuanocrtechnicalreport,
+      title={HunyuanOCR Technical Report}, 
+      author={Hunyuan Vision Team and Pengyuan Lyu and Xingyu Wan and Gengluo Li and Shangpin Peng and Weinong Wang and Liang Wu and Huawen Shen and Yu Zhou and Canhui Tang and Qi Yang and Qiming Peng and Bin Luo and Hower Yang and Houwen Peng and Hongming Yang and Senhao Xie and Binghong Wu and Mana Yang and Sergey Wang and Raccoon Liu and Dick Zhu and Jie Jiang and Linus and Han Hu and Chengquan Zhang},
+      year={2025},
+      journal={arXiv preprint arXiv:2510.18234},
+      url={https://arxiv.org/abs/2511.19575}, 
 }
 ```
 
