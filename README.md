@@ -21,6 +21,16 @@
 <a href="https://arxiv.org/abs/2511.19575"><b>📄 Technical Report</b></a>
 </p>
 
+## 🤝 Join Our Community
+
+<div align="center">
+
+| WeChat Discussion Group | Discord Server |
+| :---: | :---: |
+| <img src="./assets/qrcode_for_hunyuanocr_wechat.jpg" width="150"> | [Join HunyuanOCR Discord](https://discord.gg/XeD3p2MRDk) |
+
+</div>
+
 ## 🔥 News
 - **[2025/11/25]** 📝 Inference code and model weights publicly available.
 

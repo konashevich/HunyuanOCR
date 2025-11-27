@@ -20,6 +20,16 @@
 <a href="https://arxiv.org/abs/2511.19575"><b>📄 技术报告</b></a>
 </p>
 
+## 🤝 加入社群交流
+
+<div align="center">
+
+| WeChat Discussion Group | Discord Server |
+| :---: | :---: |
+| <img src="./assets/qrcode_for_hunyuanocr_wechat.jpg" width="150"> | [Join HunyuanOCR Discord](https://discord.gg/XeD3p2MRDk) |
+
+</div>
+
 ## 🔥 最新动态
 - **[2025/11/25]** 📝 推理代码和模型权重已开源。
 
