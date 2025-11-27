@@ -25,7 +25,7 @@
 
 <div align="center">
 
-| WeChat Discussion Group | Discord Server |
+| Wechat Discussion Group | Discord Group |
 | :---: | :---: |
 | <img src="./assets/qrcode_for_hunyuanocr_wechat.jpg" width="150"> | [Join HunyuanOCR Discord](https://discord.gg/XeD3p2MRDk) |
 
