@@ -127,6 +127,10 @@ output = llm.generate([inputs], sampling_params)[0]
 print(clean_repeated_substrings(output.outputs[0].text))
 ```
 
+### 或者，也可以直接使用提供的推理脚本：
+```shell
+cd Hunyuan-OCR-master/Hunyuan-OCR-vllm && python run_hy_ocr.py
+```
 
 ## 🚀 基于Transformers快速使用
 
