@@ -18,8 +18,34 @@
 <p align="center">
 <a href="https://huggingface.co/spaces/tencent/HunyuanOCR"><b>🎯 Demo</b></a> |
 <a href="https://huggingface.co/tencent/HunyuanOCR"><b>📥 Model Download</b></a> |
-<a href="https://arxiv.org/abs/2511.19575"><b>📄 Technical Report</b></a>
+<a href="https://arxiv.org/abs/2511.19575"><b>📄 Technical Report</b></a> |
+<a href="./docs/README.md"><b>🚀 Local Installation Guide</b></a>
 </p>
+
+---
+
+## 🎉 New: Local Installation & MCP Server
+
+**Want to run HunyuanOCR locally and make it accessible as an MCP server across your network?**
+
+👉 **[See Complete Installation Guide](./docs/README.md)**
+
+This repository now includes:
+- ✅ Step-by-step installation guide for Windows/Linux/WSL2
+- ✅ MCP (Model Context Protocol) server implementation
+- ✅ 9 ready-to-use OCR tools for AI agents
+- ✅ Network deployment instructions
+- ✅ Automated setup scripts
+
+**Quick Start:**
+```cmd
+# Windows users (installs in WSL2)
+scripts\setup-phase1.bat
+```
+
+See [docs/README.md](./docs/README.md) for full instructions.
+
+---
 
 ## 🤝 Join Our Community
 

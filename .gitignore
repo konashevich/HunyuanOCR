@@ -1,0 +1,99 @@
+# Python virtual environment
+hunyuanocr-env/
+venv/
+env/
+ENV/
+.venv
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# HuggingFace cache and downloaded models
+.cache/
+huggingface/
+.huggingface/
+models/
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.msgpack
+*.h5
+
+# Model checkpoints and weights (often 10GB+)
+checkpoints/
+weights/
+pretrained/
+*.ckpt
+*.model
+
+# vLLM cache
+.vllm/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+*.out
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Test outputs and generated files
+test_outputs/
+output/
+results/
+*.jpg.out
+*.png.out
+
+# Large data files
+*.tar
+*.tar.gz
+*.zip
+*.7z
+data/
+datasets/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# OS files
+Thumbs.db
+desktop.ini
